@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Job Application Tracker</title>
     
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
 <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -18,17 +18,17 @@
 
             <div class="total p-5 shadow-sm ">
                 <p class="text-[16px] ">Total</p>
-                <h2 class="text-[24px] text-primary "><span>0</span></h2>
+                <h2 id="total-count" class="text-[24px] text-primary "><span>0</span></h2>
             </div>
 
             <div class=" p-5 shadow-sm ">
                 <p class="text-[16px] ">Interview</p>
-                <h2 class="text-[24px] text-accent"><span>0</span></h2>
+                <h2 id="interview-count" class="text-[24px] text-accent"><span>0</span></h2>
             </div>
 
             <div class=" p-5 shadow-sm ">
                 <p class="text-[16px] ">Rejected</p>
-                <h2 class="text-[24px] text-secondary"><span>0</span></h2>
+                <h2 id="rejected-count" class="text-[24px] text-secondary"><span>0</span></h2>
             </div>
           </div>
           
@@ -48,9 +48,9 @@
         
 
         <div class="" >
-            <button class="btn btn-primary w-[100px]" >All</button>
-            <button class="btn w-[100px] ml-3">Interview</button>
-            <button class="btn w-[100px] ml-3">Rejected</button>
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn btn-primary w-[100px]" >All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn w-[100px] ml-3">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn w-[100px] ml-3">Rejected</button>
 
 
         </div>
@@ -235,6 +235,9 @@
 
             </div>
         </div>
-    </section>        
+    </section>  
+    
+    
+    <script src="./script/script.js"></script>
 </body>
 </html>
