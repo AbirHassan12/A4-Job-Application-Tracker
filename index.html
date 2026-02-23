@@ -15,7 +15,7 @@
 
 <body class="bg-gray-50 min-h-screen font-all">
     <header class="max-w-[80%] mx-auto mb-5 py-10">
-         <h1 class="text-[30px] font-extrabold mb-6">Job Application Tracker</h1>
+         <h1 class="text-[25px] lg:text-[30px] font-extrabold mb-6">Job Application Tracker</h1>
         
           <div class="count-container grid grid-cols-1 lg:grid-cols-3 gap-3">
             <div class="total p-5 shadow-sm bg-white rounded-lg">
@@ -38,13 +38,13 @@
     <main class="max-w-[80%] mx-auto pb-20">
         <div class="flex justify-between items-center px-5 mb-5">
             <h2 class="text-[20px] font-bold">Available Jobs</h2>
-            <h2 class="text-[18px] text-neutral-400"><span id="live-count">8</span> Jobs Available</h2>
+            <h2 class="text-[14px] lg:text-[18px] text-neutral-400"><span id="live-count">8</span> Jobs Available</h2>
         </div>
         
         <div class="flex gap-3 mb-8 px-5">
-            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn btn-primary w-[120px]">All</button>
-            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn bg-gray-300 text-black border-none w-[120px]">Interview</button>
-            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-gray-300 text-black border-none w-[120px]">Rejected</button>
+            <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn" class="btn btn-primary w-[70px] lg:w-[120px]">All</button>
+            <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn" class="btn bg-gray-300  text-black border-none w-[70px] lg:w-[120px]">Interview</button>
+            <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn" class="btn bg-gray-300 text-black border-none w-[70px] lg:w-[120px]">Rejected</button>
         </div>
 
         <div id="filtered-section" class="grid grid-cols-1 gap-5 hidden">
