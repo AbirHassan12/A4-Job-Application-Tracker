@@ -56,20 +56,24 @@ function toggleStyle(id) {
     }
 }
 
+
+
 mainContainer.addEventListener('click', function (event) {
-    
     
     if (event.target.classList.contains('interviewBtn')) {
         const parenNode = event.target.parentNode.parentNode;
 
-       
         const company = parenNode.querySelector('.company').innerText;
         const position = parenNode.querySelector('.position').innerText;
         const locationSalary = parenNode.querySelector('.location-salary').innerText;
         const description = parenNode.querySelector('.description').innerText;
 
         
-        parenNode.querySelector('.type').innerText = 'Interview';
+        const statusBadge = parenNode.querySelector('.type');
+        statusBadge.innerText = 'Interview';
+        
+        statusBadge.classList.remove('bg-base-300', 'bg-secondary', 'text-black');
+        statusBadge.classList.add('bg-accent', 'text-white', 'rounded');
 
         const cardInfo = {
             company,
@@ -79,16 +83,13 @@ mainContainer.addEventListener('click', function (event) {
             description
         };
 
-        
         const jobExist = interviewList.find(item => item.company == cardInfo.company);
         if (!jobExist) {
             interviewList.push(cardInfo);
         }
 
-        
         rejectedList = rejectedList.filter(item => item.company != cardInfo.company);
 
-        
         if (currentStatus == 'rejected-filter-btn') {
             renderRejected();
         }
@@ -107,7 +108,12 @@ mainContainer.addEventListener('click', function (event) {
         const locationSalary = parenNode.querySelector('.location-salary').innerText;
         const description = parenNode.querySelector('.description').innerText;
 
-        parenNode.querySelector('.type').innerText = 'Rejected';
+        
+        const statusBadge = parenNode.querySelector('.type');
+        statusBadge.innerText = 'Rejected';
+        
+        statusBadge.classList.remove('bg-base-300', 'bg-accent', 'text-black');
+        statusBadge.classList.add('bg-secondary', 'text-white', 'rounded');
 
         const cardInfo = {
             company,
@@ -133,7 +139,7 @@ mainContainer.addEventListener('click', function (event) {
 
         calculateCount();
 
-    
+   
     } else if (event.target.classList.contains('delete') || event.target.closest('.delete')) {
         const parenNode = event.target.closest('.job');
         const companyName = parenNode.querySelector('.company').innerText;
@@ -144,7 +150,6 @@ mainContainer.addEventListener('click', function (event) {
         if (currentStatus == 'all-filter-btn') {
             parenNode.remove();
         } else {
-            
             currentStatus == 'interview-filter-btn' ? renderInterview() : renderRejected();
         }
 

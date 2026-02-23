@@ -8,19 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
 </head>
-<body class="bg-gray-50 min-h-screen">
+
+<body class="bg-gray-50 min-h-screen font-all">
     <header class="max-w-[80%] mx-auto mb-5 py-10">
          <h1 class="text-[30px] font-extrabold mb-6">Job Application Tracker</h1>
         
           <div class="count-container grid grid-cols-1 lg:grid-cols-3 gap-3">
             <div class="total p-5 shadow-sm bg-white rounded-lg">
-                <p class="text-[16px] font-medium">Total Applications</p>
+                <p class="text-[16px] font-medium">Total</p>
                 <h2 id="total-count" class="text-[24px] text-primary font-bold"><span>0</span></h2>
             </div>
 
             <div class="p-5 shadow-sm bg-white rounded-lg">
-                <p class="text-[16px] font-medium">Interview Stage</p>
+                <p class="text-[16px] font-medium">Interview </p>
                 <h2 id="interview-count" class="text-[24px] text-accent font-bold"><span>0</span></h2>
             </div>
 
@@ -33,7 +37,7 @@
 
     <main class="max-w-[80%] mx-auto pb-20">
         <div class="flex justify-between items-center px-5 mb-5">
-            <h2 class="text-[20px] font-bold">Manage Applications</h2>
+            <h2 class="text-[20px] font-bold">Available Jobs</h2>
             <h2 class="text-[18px] text-neutral-400"><span id="live-count">8</span> Jobs Available</h2>
         </div>
         
@@ -47,14 +51,33 @@
             </div>
 
         <div id="card-container" class="grid grid-cols-1 gap-5">
+              <!-- card 1 -->
             
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Google</h2>
-                    <p class="position">Frontend Engineer</p>
-                    <p class="location-salary">Mountain View • Full-time • $150k - $200k</p>
+                    <h2 class="company font-bold text-[20px]">Mobile First Corp</h2>
+                    <p class="position">Frontend React Native Developer</p>
+                    <p class="location-salary">Remote • Full-time • $130,000 - $175,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Leading search engine looking for React experts to optimize core platforms.</p>
+                    <p class="description">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <br>
+                    <div class="flex gap-2">
+                        <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
+                        <button class="rejectedbtn btn btn-outline btn-secondary btn-sm">Rejected</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="delete btn btn-ghost rounded-full text-error"><i class="fa-solid fa-trash-can"></i></button>
+                </div>
+            </div>
+            <!-- card 2 -->
+            <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
+                <div>
+                    <h2 class="company font-bold text-[20px]">WebFlow Agency</h2>
+                    <p class="position">Web Designer & Developer</p>
+                    <p class="location-salary">Los Angeles, CA • Part-time •$80,000 - $120,000</p>
+                    <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
+                    <p class="description">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -66,13 +89,15 @@
                 </div>
             </div>
 
+              <!-- card 3 -->
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Meta</h2>
-                    <p class="position">Product Designer</p>
-                    <p class="location-salary">Remote • Contract • $90/hr</p>
+                    <h2 class="company font-bold text-[20px]">DataViz Solutions</h2>
+                    <p class="position">Data Visualization Specialist</p>
+                    <p class="location-salary">Boston, MA •Full-time•$125,000 - $165,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Designing the future of social connection in the metaverse.</p>
+                    <p class="description">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.
+</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -84,13 +109,14 @@
                 </div>
             </div>
 
+              <!-- card 4 -->
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Amazon</h2>
-                    <p class="position">Backend Developer (AWS)</p>
-                    <p class="location-salary">Seattle • Full-time • $140k - $180k</p>
+                    <h2 class="company font-bold text-[20px]">CloudFirst Inc</h2>
+                    <p class="position">Backend Developer</p>
+                    <p class="location-salary">Seattle, WA•Full-time•$140,000 - $190,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Scaling cloud infrastructure for global enterprise customers.</p>
+                    <p class="description">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -102,13 +128,14 @@
                 </div>
             </div>
 
+              <!-- card 5 -->
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Netflix</h2>
-                    <p class="position">Senior UI Engineer</p>
-                    <p class="location-salary">Los Gatos • Full-time • $250k+</p>
+                    <h2 class="company font-bold text-[20px]">Innovation Labs</h2>
+                    <p class="position">UI/UX Engineer</p>
+                    <p class="location-salary">Austin, TX • Full-time • $110,000 - $150,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Creating seamless streaming experiences for TV and Web.</p>
+                    <p class="description">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -120,13 +147,14 @@
                 </div>
             </div>
 
+            <!-- card 6 -->
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Stripe</h2>
-                    <p class="position">Full Stack Developer</p>
-                    <p class="location-salary">Remote • Full-time • $160k</p>
+                    <h2 class="company font-bold text-[20px]">MegaCorp Solutions</h2>
+                    <p class="position">JavaScript Developer</p>
+                    <p class="location-salary">New York, NY • Full-time • $130,000 - $170,00</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Building financial infrastructure for the internet economy.</p>
+                    <p class="description">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -138,13 +166,14 @@
                 </div>
             </div>
 
+            <!-- card 7 -->
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Tesla</h2>
-                    <p class="position">Embedded Systems Engineer</p>
-                    <p class="location-salary">Austin • Full-time • $130k</p>
+                    <h2 class="company font-bold text-[20px]">StartupXYZ</h2>
+                    <p class="position">Full Stack Engineer</p>
+                    <p class="location-salary">Remote • Full-time • $120,000 - $160,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Developing firmware for next-generation electric vehicles.</p>
+                    <p class="description">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
@@ -152,35 +181,19 @@
                     </div>
                 </div>
                 <div>
+
+                 <!-- card 8 -->
                     <button class="delete btn btn-ghost rounded-full text-error"><i class="fa-solid fa-trash-can"></i></button>
                 </div>
             </div>
 
             <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
                 <div>
-                    <h2 class="company font-bold text-[20px]">Airbnb</h2>
-                    <p class="position">Mobile Engineer (Swift)</p>
-                    <p class="location-salary">Remote • Full-time • $145k</p>
+                    <h2 class="company font-bold text-[20px]">TechCorp Industries</h2>
+                    <p class="position">Senior Frontend Developer</p>
+                    <p class="location-salary">San Francisco, CA • Full-time • $130,000 - $175,000</p>
                     <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Improving the guest and host experience on iOS devices.</p>
-                    <br>
-                    <div class="flex gap-2">
-                        <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
-                        <button class="rejectedbtn btn btn-outline btn-secondary btn-sm">Rejected</button>
-                    </div>
-                </div>
-                <div>
-                    <button class="delete btn btn-ghost rounded-full text-error"><i class="fa-solid fa-trash-can"></i></button>
-                </div>
-            </div>
-
-            <div class="job shadow-sm space-y-2 p-5 flex justify-between bg-white rounded-lg border border-gray-100">
-                <div>
-                    <h2 class="company font-bold text-[20px]">Spotify</h2>
-                    <p class="position">Data Scientist</p>
-                    <p class="location-salary">New York • Full-time • $155k</p>
-                    <p class="type bg-base-300 w-[120px] p-1 text-center mt-5 mb-5 rounded text-sm">Not Applied</p>
-                    <p class="description">Analyzing listener behavior to power the "Discover Weekly" engine.</p>
+                    <p class="description">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
                     <br>
                     <div class="flex gap-2">
                         <button class="interviewBtn btn btn-outline btn-accent btn-sm">Interview</button>
