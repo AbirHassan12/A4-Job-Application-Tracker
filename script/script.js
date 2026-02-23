@@ -162,10 +162,10 @@ function renderInterview() {
 
     if (interviewList.length === 0) {
         filterSection.innerHTML = `
-        <div class="flex flex-col items-center justify-center py-10 w-full text-center space-y-4 col-span-full">
-            <img src="./images/jobs.png" alt="No jobs" class="w-40 mb-4">
+     <div class="flex flex-col items-center justify-center py-10 w-full text-center space-y-4 col-span-full">
+        <img src="./images/jobs.png" alt="No jobs" class="w-40 mb-4">
             <h2 class="text-2xl font-bold">No jobs available</h2>
-            <p class="text-[20px] text-gray-500">Check back soon for new job opportunities</p>
+        <p class="text-[20px] text-gray-500">Check back soon for new job opportunities</p>
         </div>`;
         return;
     }
@@ -197,11 +197,12 @@ function renderRejected() {
 
     if (rejectedList.length === 0) {
         filterSection.innerHTML = `
-        <div class="flex flex-col items-center justify-center py-10 w-full text-center space-y-4 col-span-full">
-            <img src="./images/jobs.png" alt="No jobs" class="w-40 mb-4">
+        
+     <div class="flex flex-col items-center justify-center py-10 w-full text-center space-y-4 col-span-full">
+        <img src="./images/jobs.png" alt="No jobs" class="w-40 mb-4">
             <h2 class="text-2xl font-bold">No jobs available</h2>
             <p class="text-[20px] text-gray-500">Check back soon for new job opportunities</p>
-        </div>`;
+    </div>`;
         return;
     }
 
