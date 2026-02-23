@@ -46,10 +46,12 @@ function toggleStyle(id) {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderInterview();
-    } else if (id === 'all-filter-btn') {
+    }
+     else if (id === 'all-filter-btn') {
         allCardSection.classList.remove('hidden');
         filterSection.classList.add('hidden');
-    } else if (id === 'rejected-filter-btn') {
+    }
+     else if (id === 'rejected-filter-btn') {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden');
         renderRejected();
@@ -100,7 +102,8 @@ mainContainer.addEventListener('click', function (event) {
         calculateCount();
 
     
-    } else if (event.target.classList.contains('rejectedbtn')) {
+    } 
+    else if (event.target.classList.contains('rejectedbtn')) {
         const parenNode = event.target.parentNode.parentNode;
 
         const company = parenNode.querySelector('.company').innerText;
@@ -140,7 +143,8 @@ mainContainer.addEventListener('click', function (event) {
         calculateCount();
 
    
-    } else if (event.target.classList.contains('delete') || event.target.closest('.delete')) {
+    }
+     else if (event.target.classList.contains('delete') || event.target.closest('.delete')) {
         const parenNode = event.target.closest('.job');
         const companyName = parenNode.querySelector('.company').innerText;
 
@@ -149,7 +153,10 @@ mainContainer.addEventListener('click', function (event) {
 
         if (currentStatus == 'all-filter-btn') {
             parenNode.remove();
-        } else {
+
+           
+        } 
+        else {
             currentStatus == 'interview-filter-btn' ? renderInterview() : renderRejected();
         }
 
